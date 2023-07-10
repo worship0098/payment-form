@@ -1,72 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!--expiration-->
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MORPHNG</title>  
-
-<style>
-        .font{ font-size: 15px; }
-   *{   margin: 0;
-          padding: 0; } 
-
-          body{ font-family: 'josefn sans' ,sans-serif;}
-          
-          span{ color: red;}
-
-          .container{text-align: center;
-                  position: relative;
-                  height: 100vh;
-                  width: 100%;
-                  background-color: rgba(1, 1, 1,1);
-                  display: flex;
-                  justify-content: center;
-                  flex-direction: column;
-                   }
-.text{
-        max-width: 100%;
-        letter-spacing: 5px;
-        font-size: 4em;
-        position: absolute;
-        color: white;
-        animation: text 45s infinite ease-in-out ;
-}
-
-.text:nth-child(1){ animation-delay: -50s;}
-
-.text:nth-child(2){ animation-delay: -40s;}
-
-.text:nth-child(3){ animation-delay: -30s;}
-
-.text:nth-child(4){ animation-delay: -20s;}
-
-.text:nth-child(5){ animation-delay: -10s;}
-
-
-
-@keyframes text{ 0%,5%,100% { filter: blur(0px);
-        opacity: 1;}
-        20%,80% { filter: blur(35px);
-     opacity: 0; 
-        }
-}
-
-
-               
-</style>
+    <title>payment form </title>
+    <style>
+        h1{color: rebeccapurple;
+        font-size: 50px;}
+      
+    </style>
+ <link rel="stylesheet" href="./index.css">
+   
 </head>
 <body>
-       <main class="font">
-       <div class=" container"> 
-
-        <div class="text">  Everything<span>happens </span> for a reason . </div> 
-        <div class="text">  you may not see now it now  <span>But sooner or later,god will reveal </span> </div> 
-        <div class="text"> why he let things happens. <span> Always remember that</span> his way is better than our ways. </div> 
-        <div class="text">  his will is <span>beyond our will .</span> put your turst in him </div> 
-        <div class="text"> ✌️✌️✌️ </div> 
-
-       </div>
-</main>
-</body>
+    <div class="container">
+    <form action=""> 
+        <h1 class="main_heading"><i>**  WlCM TO WORSHIP INDUSTRY**</i> </h1> 
+     
+       
+        <h2>contact information</h2>
+        <p>name: *<input type="text"name="name" required ></p>
+        
+          <fieldset> <!-- fieldset = use for making box
+         legend = use for give the name box-->
+              <legend> gender</legend> <p> Male <input type="radio" name="gender" id="male"> female <input type="radio" name ="gender" id="female"></p> </fieldset> 
+         <p> Address :<textarea name="address" id="address"cols="100" rows="8"></textarea> </p>
+             <p> E mail : *<input type="email" name="email" id="email" required</p>
+             <p> pincode :* <input  type="number" name="pincode" id="pincode" required</p>
+              <h3>payment information</h3>
+             <p>card type :
+                 <select name="card_type" id="card_type">
+                     <option value="">--select a card card_type--</option>
+                     <option value="visa">visa</option>
+                     <option value="rupye">rupye</option>
+                     <option value="phone pay">phone pay</option>
+                 </select>
+             </p>
+             <p>card number: *<input type="number" name="card_number" id="card_type" required></p>
+        <p> Expiration date : *<input type="date" name="exp_date" id="exp_date>" required</p>
+        <p> cvv <input type="password" name="cvv" id="cvv>"</p>
+        <hr>
+        <p> <input type="submit" value="pay now"></p>
+                </form>
+    </div>
+     </body>  
+     
+     
 </html>
