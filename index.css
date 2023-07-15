@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* hrr code may common   -= upper  ke liye likha hai */ 
+
+#wrapper{
+
+    height:100vh;
+    width:100vh;
+    /* pura viwe port lene ke liye h ,w 100vh liya hai */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ /* content ko center may lane ke liye  */
+
+}
+.btn{
+    z-index: 1;
+    /* text ko dekhne ke liye 1 z kenge  */
+    position: relative;
+    background-color: rgb(116, 32, 218);
+    padding: 0.8rem 2.9rem;
+    /* ye  padding  'hire me ayr uski divaro ke bich gap krne ke liye hai ' */
+    color: beige;
+/* text ka color change krne ke liye  */
+    font-size: 30px; 
+    box-shadow: 5px 5px 7px 0px #000f00
+ /* 4ro disha may shado dene ke liye  */
+     
+ 
+}
+
+
+.btn::before{content: "";
+    /* this is a shudo selecter = jo jis particular chij pr hm kam kr rhe hai  ager 
+    befor hoga to uss centent ke pehle  jo hm yha likhenge vo judd jayga 
+    aur ager after hoga tp jo content hai uske piche jud jayda  */
+    background-color: black;
+/* balck pati lane ke liye  */
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+/* puti  pati black lane ke liye ; */
+transform: scaleX(0);
+/* starting may  black nhi chahoye  */
+transform-origin: left;
+/* left se change hota aye  */
+transition: 1s;
+/* sommth se lane ke liye  */
+z-index: -1;
+/* kali pati niche reh jay isske lie  z -1  */
+
+
+}
+.btn:hover:before{
+
+    transform: scaleX(1);
+    /* jese hi btn pe hower krkenge uksa scale 0 hai usey 1 kr denge  */
+}
+@media screen  and (max-width: 600px)
+   { .btn{ font-size: 18px;
+
+    }
+}
